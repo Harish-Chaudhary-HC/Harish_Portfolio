@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+  index.html – Harish Chaudhary portfolio (page structure).
+  Sections are filled in by js/script.js from the DATA object.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harish Chaudhary | Aspiring Software Developer</title>
+  <meta name="description" content="Portfolio of Harish Chaudhary, CITS trainee (CSA) at NSTI Kanpur. Python, MySQL and AI-based projects.">
+  <meta property="og:title" content="Harish Chaudhary | Aspiring Software Developer">
+  <meta property="og:description" content="CITS trainee at NSTI Kanpur building AI-based Python and MySQL projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💻%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a href="#home" class="brand">Harish Chaudhary</a>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="icon-btn" aria-label="Switch light or dark theme">🌙</button>
+      <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hello">Hi, I am</p>
+          <h1 id="hero-name"></h1>
+          <p class="headline" id="hero-headline"></p>
+          <p class="intro" id="hero-intro"></p>
+          <div class="btn-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+            <a class="btn" id="resume-btn" href="assets/documents/resume.pdf" download="Harish_Chaudhary_Resume.pdf">Download Resume</a>
+          </div>
+          <div class="social" id="hero-social"></div>
+        </div>
+        <div class="photo-frame">
+          <img src="assets/images/profile.jpg" alt="Portrait of Harish Chaudhary" width="800" height="800"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'avatar',textContent:'HC',ariaLabel:'HC initials'}))">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="container narrow">
+        <h2>About me</h2>
+        <p id="about-text"></p>
+      </div>
+    </section>
+
+    <section id="education" class="section alt reveal">
+      <div class="container narrow">
+        <h2>Education</h2>
+        <ol class="timeline" id="education-list"></ol>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skill-groups" id="skills-list"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt reveal">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="cards" id="projects-list"></div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section reveal">
+      <div class="container">
+        <h2>Certifications</h2>
+        <div class="cert-list" id="cert-list"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt reveal">
+      <div class="container narrow">
+        <h2>Contact</h2>
+        <p>Open to learning opportunities and entry-level software roles. Reach me here:</p>
+        <ul class="contact-list" id="contact-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><p>© <span id="year"></span> Harish Chaudhary</p></footer>
+  <button id="to-top" class="to-top" aria-label="Back to top" hidden>↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
